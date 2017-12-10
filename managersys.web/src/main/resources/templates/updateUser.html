@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+<script type="text/javascript" th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+</head>
+<body>
+<form th:action="@{/updateUser}" method="post" th:object="${userDTO}">
+	<table>
+		<tr>
+			<td>id</td>
+			<td><input type="text" th:value="${userDTO.id}" th:field="*{id}"/></td>
+		</tr>
+		<tr>
+			<td>userName</td>
+			<td><input type="text"  th:value="${userDTO.userName}" th:field="*{userName}"/></td>
+		</tr>
+		<tr>
+			<td>userNum</td>
+			<td><input type="text" th:value="${userDTO.userNum}" th:field="*{userNum}"/></td>
+		</tr>
+		
+		<tr>
+			<td>sex</td>
+			<td><input type="text" th:value="${userDTO.sex}" th:field="*{sex}"/></td>
+		</tr>
+		<tr>
+			<td>age</td>
+			<td><input type="text" th:value="${userDTO.age}" th:field="*{age}"/></td>
+		</tr>
+		<tr>
+			<td>birthday</td>
+			<td><input type="text" th:value="${userDTO.birthday}" th:field="*{birthday}"/></td>
+		</tr>
+		<tr>
+			<td>education</td>
+			<td><input type="text" th:value="${userDTO.education}" th:field="*{education}"/></td>
+		</tr>
+		<tr>
+			<td>email</td>
+			<td><input type="text" th:value="${userDTO.email}" th:field="*{email}"/></td>
+		</tr>
+		<tr>
+			<td>phone</td>
+			<td><input type="text" th:value="${userDTO.phone}" th:field="*{phone}"/></td>
+		</tr>
+		
+		
+		<tr>
+			<td>empType</td>
+			<td><input type="text" th:value="${userDTO.empType}" th:field="*{empType}"/></td>
+		</tr>
+		<tr>
+			<td>hiredate</td>
+			<td><input type="text" th:value="${userDTO.hiredate}" th:field="*{hiredate}"/></td>
+		</tr>
+		<tr>
+			<td>firstDeptDesc</td>
+			<td><input type="text" th:value="${userDTO.firstDeptDesc}" th:field="*{firstDeptDesc}"/></td>
+		</tr>
+		<tr>
+			<td>secondDeptDesc</td>
+			<td><input type="text" th:value="${userDTO.secondDeptDesc}" th:field="*{secondDeptDesc}"/></td>
+		</tr> 
+		<tr>
+			<td>images</td>
+			<td><input type="text" th:value="${userDTO.images}" th:field="*{images}"/></td>
+		</tr>      
+
+     	<tr>
+			<td>positionLevel</td>
+			<td><input type="text" th:value="${userDTO.positionLevel}" th:field="*{positionLevel}"/></td>
+		</tr>
+		<tr>
+			<td>positionName</td>
+			<td><input type="text" th:value="${userDTO.positionName}" th:field="*{positionName}"/></td>
+		</tr>
+		<tr>
+			<td>positionOrder</td>
+			<td><input type="text" th:value="${userDTO.positionOrder}" th:field="*{positionOrder}"/></td>
+		</tr>
+
+      
+      	<tr>
+			<td>workAddr</td>
+			<td><input type="text" th:value="${userDTO.workAddr}" th:field="*{workAddr}"/></td>
+		</tr>
+<!-- 		<tr>
+			<td>roles</td>
+			<td><input type="text" name="role_desc" value=""/></td>
+		</tr>  -->
+
+		
+		
+	</table>
+		<input type="submit" value="submit"/>
+</form>
+</body>
+</html>

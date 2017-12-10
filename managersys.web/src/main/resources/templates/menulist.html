@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+<script type="text/javascript" th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+</head>
+<body>
+
+<center>
+
+<table border="1">
+	
+    <tr>
+      <th>id</th>
+      <th>menuName</th>
+      <th>menuDesc</th>
+
+      <th>url</th>
+      <th>menu</th>
+     
+      <th> <a th:href="@{/toAddMenu}">新增</a> </th>
+    </tr>  
+
+ 	<tr th:each="menuDTO: ${list}">
+ 		<td th:text="${menuDTO.id}"></td>
+		<td th:text="${menuDTO.menuName}"></td>
+		<td th:text="${menuDTO.menuDesc}"></td>
+		
+		<td th:text="${menuDTO.url}"></td>
+		<td th:text="${menuDTO.menu}"></td>
+
+		
+		
+		<td> <a th:href="@{/toUpdateMenu(id=${menuDTO.id})}">编辑</a> </td>
+		<td> <a th:href="@{/deleteMenu(id=${menuDTO.id})}">删除</a> </td>
+	</tr>
+</table>
+	
+</center>
+
+</body>
+</html>

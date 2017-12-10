@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+<script type="text/javascript" th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+</head>
+<body>
+
+<center>
+
+<table border="1">
+	
+    <tr>
+      <th>id</th>
+      <th>userName</th>
+      <th>userNum</th>
+      
+      <th>sex</th>
+      <th>age</th>
+      <th>birthday</th>
+      <th>education</th>
+      <th>email</th>
+      <th>phone</th>
+      
+      <th>empType</th>
+      <th>hiredate</th>
+      <th>firstDeptDesc</th>
+      <th>secondDeptDesc</th>
+      <th>images</th>
+      
+      <th>positionLevel</th>
+      <th>positionName</th>
+      <th>positionOrder</th>
+      
+      <th>workAddr</th>  
+      <th>roles</th>
+            
+      <th> <a th:href="@{/toAddUser}">新增</a> </th>
+    </tr>  
+
+ 	<tr th:each="userDTO: ${list}">
+ 		<td th:text="${userDTO.id}"></td>
+		<td th:text="${userDTO.userName}"></td>
+		<td th:text="${userDTO.userNum}"></td>
+		
+		<td th:text="${userDTO.sex}"></td>
+		<td th:text="${userDTO.age}"></td>
+		<td th:text="${userDTO.birthday}"></td>
+		<td th:text="${userDTO.education}"></td>
+		<td th:text="${userDTO.email}"></td>
+		<td th:text="${userDTO.phone}"></td>
+    
+		<td th:text="${userDTO.empType}"></td>
+		<td th:text="${userDTO.hiredate}"></td>
+		<td th:text="${userDTO.firstDeptDesc}"></td>
+		<td th:text="${userDTO.secondDeptDesc}"></td>
+		<td th:text="${userDTO.images}"></td>
+		
+		<td th:text="${userDTO.positionLevel}"></td>
+		<td th:text="${userDTO.positionName}"></td>
+		<td th:text="${userDTO.positionOrder}"></td>
+		
+		<td th:text="${userDTO.workAddr}"></td>  
+      
+<!-- 		<td th:text="${userDTO.roles}"></td>  -->
+		
+		
+		<td> <a th:href="@{/toUpdateUser(id=${userDTO.id})}">编辑</a> </td>
+		<td> <a th:href="@{/deleteUser(id=${userDTO.id})}">删除</a> </td>
+	</tr>
+</table>
+</center>
+<a th:href="@{/search}">search</a>
+
+</body>
+</html>

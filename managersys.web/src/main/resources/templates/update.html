@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+<script type="text/javascript" th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+</head>
+<body>
+<form th:action="@{/update}" method="post" th:object="${role}">
+	<table>
+		<tr>
+		<td>角色id</td><!-- th:value="${role.id}" -->
+		<td><input type="text"  th:field="*{id}" th:placeholder="${role.id}"/></td>
+		</tr>
+		<tr>
+		<td>角色name</td>
+		<td><input type="text" th:value="${role.roleName}" th:field="*{roleName}"/></td>
+		</tr>
+		<tr>
+		<td>角色desc</td>
+		<td><input type="text" th:value="${role.roleDesc}" th:field="*{roleDesc}"/></td>
+		</tr>				
+	</table>
+	<input type="submit" value="submit"/>
+</form>
+</body>
+</html>
